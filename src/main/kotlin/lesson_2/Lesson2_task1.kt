@@ -3,8 +3,9 @@ fun main() {
     val student2 = 4
     val student3 = 3
     val student4 = 5
+    val countOfStudents = 4
     val averageScore: Float = (student1.toFloat() + student2.toFloat() + student3.toFloat()
-            + student4.toFloat()) / 4.0f
+            + student4.toFloat()) / countOfStudents
 
     println("Average score: $averageScore")
 }
