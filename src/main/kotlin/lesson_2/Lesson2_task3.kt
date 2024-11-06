@@ -10,12 +10,13 @@
  */
 
 fun main() {
+    val hour = 60
     val hourOfDeparture = 9
     val minuteOfDeparture = 39
     val minuteToGo = 457
     val totalMinutes = minuteOfDeparture + minuteToGo
-    val minuteArrival = totalMinutes % 60
-    val hourArrival = (totalMinutes / 60) + hourOfDeparture
+    val minuteArrival = totalMinutes % hour
+    val hourArrival = (totalMinutes / hour) + hourOfDeparture
 
     println("Time to Arrival: ${"%02d".format(hourArrival)}:${"%02d".format(minuteArrival)}")
 }
