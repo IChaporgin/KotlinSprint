@@ -1,9 +1,12 @@
 package org.example.lesson_1
 
 fun main() {
-    val secondOfFlight = 6480
-    val hour = 6400 / 3600
-    val minute = (secondOfFlight - (hour * 3600)) / 60
-    val second = (secondOfFlight - (minute * 60) - (hour * 3600))
-    println("Time of flight: ${"%02d".format(hour)}:${"%02d".format(minute)}:${"%02d".format(second)}")
+    val totalSeondOfFloght = 6480
+    val secondInHour = 3600
+    val minuteInHour = 60
+    val hourOfFlight = totalSeondOfFloght / secondInHour
+    val reamningSecond = totalSeondOfFloght % secondInHour
+    val minuteOfFlight = reamningSecond / minuteInHour
+    val secondOfFlight = reamningSecond % minuteInHour
+    println("Time of flight: ${"%02d".format(hourOfFlight)}:${"%02d".format(minuteOfFlight)}:${"%02d".format(secondOfFlight)}")
 }
