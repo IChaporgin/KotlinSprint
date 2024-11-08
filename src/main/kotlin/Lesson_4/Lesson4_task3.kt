@@ -27,10 +27,10 @@ fun main() {
     val isOpenAwning = true
     val humidity = 20
     val whether = "Whinter"
-    val result = isSunny && isOpenAwning && (humidity == NORMAL_HUMIDITY) && whether != WHETER
+    val result = isSunny && isOpenAwning && (humidity == NORMAL_HUMIDITY) && whether != WHETHER
     println("Благоприятные ли условия сейчас для роста бобовых? $result")
 
 }
 
 const val NORMAL_HUMIDITY = 20
-const val WHETER = "Whinter"
+const val WHETHER = "Whinter"  // возможно не очень хорошая практика создавать две локально и глобально с одним неймингом
