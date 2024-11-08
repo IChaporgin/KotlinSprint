@@ -27,9 +27,10 @@ fun main() {
     val isOpenAwning = true
     val humidity = 20
     val whether = "Whinter"
-    val result = isSunny && isOpenAwning && (humidity == NORMAL_HUMIDITY) && whether != "Whinter"
+    val result = isSunny && isOpenAwning && (humidity == NORMAL_HUMIDITY) && whether != WHETER
     println("Благоприятные ли условия сейчас для роста бобовых? $result")
 
 }
 
 const val NORMAL_HUMIDITY = 20
+const val WHETER = "Whinter"
