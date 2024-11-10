@@ -8,9 +8,9 @@
  */
 
 fun main() {
-    println("Введите ответ на данный пример \n5 * 3 =")
+    println("Введите ответ на данный пример \n${CONTROL_NUM1} * ${CONTROL_NUM2} =")
     val answer = readLine()!!.toInt()
-    if (answer == CORRECTN_ANSWER) {
+    if (answer == CONTROL_NUM1 * CONTROL_NUM2) {
         println("Добро пожаловать!")
     } else {
         println("Доступ запрещен.")
@@ -18,4 +18,5 @@ fun main() {
 
 }
 
-const val CORRECTN_ANSWER = 15
+const val CONTROL_NUM1 = 5
+const val CONTROL_NUM2 = 3
