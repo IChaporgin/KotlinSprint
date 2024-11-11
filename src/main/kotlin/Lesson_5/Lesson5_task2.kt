@@ -12,7 +12,8 @@
 
 fun main() {
     println("Введите ваш год рождения:")
-    val year = readLine()!!.toInt()
+    val year = readLine()?.toIntOrNull() ?: 0
+
     if (CURRENT_YEAR - year >= AGE_OF_MAJORITY) {
         println("Показать экран со скрытым контентом")
     } else {
