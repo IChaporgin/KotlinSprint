@@ -15,7 +15,7 @@ fun main() {
     println("Введите первое число от 0 до 42:")  //в моем решении нет проверки на диапазон, не понял нужно ли его делать
     val num1 = readln().toInt()
     println("Введите второе число от 0 до 42:")
-    val num2 = readLine()?.toIntOrNull() ?: 0
+    val num2 = readln().toInt()
 
     if (num1 == NUM_WIN1 && num2 == NUM_WIN2 || num2 == NUM_WIN1 && num1 == NUM_WIN2) {
         println("Поздравляем! Вы выиграли главный приз!")
