@@ -9,7 +9,7 @@
 
 fun main() {
     println("Введите ответ на данный пример \n${CONTROL_NUM1} * ${CONTROL_NUM2} =")
-    val answer = readLine()!!.toInt()
+    val answer = readLine()?.toIntOrNull() ?: 0
     if (answer == CONTROL_NUM1 * CONTROL_NUM2) {
         println("Добро пожаловать!")
     } else {
