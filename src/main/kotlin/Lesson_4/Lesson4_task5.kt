@@ -27,16 +27,24 @@
  */
 
 fun main() {
-    val hasDamage = false
+    val hasDamage = true
     val isWhetherGood = true
-    val crewCount = 55
-    val supplyBoxes = 60
+    val crewCount = 70
+    val supplyBoxes = 50
 
-    println("Разрешение на отправку в плавание: ${(!hasDamage && crewCount >= MIN_CREW_COUNT 
-            && crewCount <= MAX_CREW_COUNT && supplyBoxes > MIN_SUPPLY_BOXES && (!isWhetherGood || isWhetherGood))
-            || (hasDamage && crewCount == MAX_CREW_COUNT && isWhetherGood && supplyBoxes > MIN_SUPPLY_BOXES)}")
+    println("Разрешение на отправку в плавание: ${(!hasDamage != DAMAGE && crewCount 
+            >= MIN_CREW_COUNT 
+            && crewCount <= MAX_CREW_COUNT && supplyBoxes > MIN_SUPPLY_BOXES 
+            && (!isWhetherGood || isWhetherGood))
+            || (hasDamage && crewCount == MAX_CREW_COUNT && isWhetherGood 
+            && supplyBoxes >= MIN_SUPPLY_BOXES)}")
 
 }
 const val MIN_CREW_COUNT = 55
 const val MAX_CREW_COUNT = 70
 const val MIN_SUPPLY_BOXES = 50
+const val DAMAGE = false
+/* Добавил константу повреждение, на самом деле есть всегда сомнения
+ добавлять константу при наличии такого же условия в теле main, это касается константы
+ с погодой
+ */
