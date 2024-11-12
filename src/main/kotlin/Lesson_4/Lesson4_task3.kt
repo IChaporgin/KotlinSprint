@@ -26,11 +26,13 @@ fun main() {
     val isSunny = true
     val isOpenAwning = true
     val humidity = 20
-    val whether = "Whinter"
-    val result = isSunny && isOpenAwning && (humidity == NORMAL_HUMIDITY) && whether != WHETHER
+    val whether = "Warm"
+    val result = isSunny == REQUIRED_WEATHER && isOpenAwning == TENT_OPEN && (humidity == REQUIRED_HUMIDITY) && whether != UNFAVORABLE_SEASON
     println("Благоприятные ли условия сейчас для роста бобовых? $result")
 
 }
 
-const val NORMAL_HUMIDITY = 20
-const val WHETHER = "Whinter"  // возможно не очень хорошая практика создавать две локально и глобально с одним неймингом
+const val REQUIRED_HUMIDITY = 20
+const val UNFAVORABLE_SEASON = "Whinter"  // возможно не очень хорошая практика создавать две локально и глобально с одним неймингом
+const val REQUIRED_WEATHER = true
+const val TENT_OPEN = true
