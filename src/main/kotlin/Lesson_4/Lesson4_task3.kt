@@ -27,7 +27,10 @@ fun main() {
     val isOpenAwning = true
     val humidity = 20
     val whether = "Warm"
-    val result = isSunny == REQUIRED_WEATHER && isOpenAwning == TENT_OPEN && (humidity == REQUIRED_HUMIDITY) && whether != UNFAVORABLE_SEASON
+    val result = isSunny == REQUIRED_WEATHER
+            && isOpenAwning == TENT_OPEN
+            && (humidity == REQUIRED_HUMIDITY)
+            && whether != UNFAVORABLE_SEASON
     println("Благоприятные ли условия сейчас для роста бобовых? $result")
 
 }
