@@ -21,11 +21,11 @@ package org.example.Lesson_5
 
 fun main() {
     println("Привет, это простой калькулятор для расчета твоей поездки. Нам понадобятся некоторые данные, напиши расстояние в километрах до места назначения:")
-    val distance: Double = readLine()!!.toDouble()
+    val distance: Double = readln().toDouble()
     println("Отлично, теперь напиши сколько у тебя средний расход топлива:")
-    val consumption: Double = readLine()!!.toDouble()
+    val consumption: Double = readln().toDouble()
     println("А теперь сколько стоит твое топливо за литр:")
-    val price: Double = readLine()!!.toDouble()
+    val price: Double = readln().toDouble()
 
     val totalFuel = (distance * consumption) / 100
     val totalPrice = totalFuel * price
