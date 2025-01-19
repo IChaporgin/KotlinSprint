@@ -23,17 +23,17 @@ import kotlin.math.pow
 
 fun main() {
     println("Привет, это простой калькулятор для расчета ИМТ (Индекс массы тела)\nНеобходимо ввести твой рост в сантиметрах:")
-    val height: Double = readLine()!!.toDouble()
+    val height: Double = readln().toDouble()
     println("Отлично, теперь введи свой вес в килограммах:")
-    val weight: Double = readLine()!!.toDouble()
+    val weight: Double = readln().toDouble()
     val heightMetrs = height / 100
     val imt = weight / heightMetrs.pow(2)
 
     if (imt < 18.5) {
         println("ИМТ(${String.format("%.2f", imt)}) < 18.5: Недостаточная масса тела")
-    } else if (18.5 <= imt && imt < 25) {
+    } else if (imt < 25) {
         println("18.5 ≤ ИМТ(${String.format("%.2f", imt)}) < 25: Нормальная масса тела")
-    } else if (25 <= imt && imt < 30) {
+    } else if (imt < 30) {
         println("25 ≤ ИМТ(${String.format("%.2f", imt)}) < 30: Избыточная масса тела")
     } else {
         println("${String.format("%.2f", imt)} ≥ 30: Ожирение")
