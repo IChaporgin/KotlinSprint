@@ -9,10 +9,11 @@ package org.example.Lesson_6
 fun main() {
 
     println("Введите кол-во секунд которые нужно засечь:")
-    var time: Int = readln().toInt()
-    while (time > 0) {
-        println("Прошло ${time--} секунд")
+    val time: Int = readln().toInt()
+    var count = 0
+    while (count < time) {
         Thread.sleep(1000)
+        count++
     }
-    println("Время обедать)")
+    println("Прошло $time секунд")
 }
