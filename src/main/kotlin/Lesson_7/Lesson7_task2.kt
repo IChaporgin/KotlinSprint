@@ -13,7 +13,6 @@ fun main() {
                return
            } else {
                println("Не правильный код")
-               break
            }
        }
    }
