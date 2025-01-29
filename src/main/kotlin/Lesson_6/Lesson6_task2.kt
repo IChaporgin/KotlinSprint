@@ -10,10 +10,6 @@ fun main() {
 
     println("Введите кол-во секунд которые нужно засечь:")
     val time: Int = readln().toInt()
-    var count = 0
-    while (count < time) {
-        Thread.sleep(1000)
-        count++
-    }
+    Thread.sleep(time.toLong() * 1000)
     println("Прошло $time секунд")
 }
