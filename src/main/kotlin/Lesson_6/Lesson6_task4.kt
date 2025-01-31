@@ -1,11 +1,10 @@
 package org.example.Lesson_6
 
-import kotlin.random.Random
-
 fun main() {
     println("Поиграем в небольшую игру. Тебе надо угадать число от 1 до 9. У тебя 5 попыток. Давай начнем")
     var attempts = 5
-    val num: Int = Random.nextInt(1, 10)
+    val range = 1..9
+    val num = range.random()
 
      while (attempts > 0){
          println("Введите число:")
