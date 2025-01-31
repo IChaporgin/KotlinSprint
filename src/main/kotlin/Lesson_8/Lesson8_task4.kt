@@ -1,7 +1,7 @@
 package org.example.Lesson_8
 
 fun main() {
-    val ingredients = mutableListOf("молоко", "кефир", "сахар", "яблоки", "соль", "мука")
+    val ingredients = arrayOf("молоко", "кефир", "сахар", "яблоки", "соль", "мука")
 
     for (i in ingredients){
         println("${ingredients.indexOf(i) + 1}. Ингредиент: $i")
