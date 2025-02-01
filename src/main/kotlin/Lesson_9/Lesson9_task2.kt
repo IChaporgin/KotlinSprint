@@ -6,7 +6,7 @@ fun main() {
     ingredientsList.forEach{ println(it) }
     println("Желаете добавить еще?")
     val answer = readln()
-    if (answer == "да") {
+    if (answer.lowercase() == "да") {
         println("Какой ингредиент вы хотите добавить?")
         val ingredient = readln()
         ingredientsList.add(ingredient)
