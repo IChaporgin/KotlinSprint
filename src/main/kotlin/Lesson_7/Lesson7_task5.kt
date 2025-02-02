@@ -2,17 +2,20 @@ package org.example.Lesson_7
 
 fun main() {
 
-    val allSymbols = ('A'..'Z') + ('a'..'z') + ('0'..'9') + ('!'..'@')
+    val allSymbols = ('A'..'Z') + ('a'..'z') + ('0'..'9')
     var number: Int
-    var password = ""
-
+    val generatePassword: MutableList<Char> = mutableListOf('!', '@', '%')
     do {
         println("Введите длину пароля, минимум 6 символов:")
         number = readln().toInt()
     } while (number < 6)
 
-    for (i in 0..number) {
-        password += allSymbols.random()
+    for (i in 4..number) {
+        generatePassword += allSymbols.random()
     }
-    println("Ваш пароль: ${password}")
+
+    generatePassword.shuffle()
+
+    val password: String = generatePassword.joinToString("")
+    println("Ваш пароль: $password")
 }
