@@ -1,4 +1,4 @@
-package org.example.Lesson_8
+package org.example.Lesson_1_10.Lesson_8
 
 fun main() {
     val ingredientApplePie = arrayOf("яйца", "сметана", "мука", "сахар", "яблоки")

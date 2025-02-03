@@ -1,4 +1,4 @@
-package org.example.lesson_1
+package org.example.Lesson_1_10.lesson_1
 
 fun main() {
     val totalSecondOfFlight = 6480
