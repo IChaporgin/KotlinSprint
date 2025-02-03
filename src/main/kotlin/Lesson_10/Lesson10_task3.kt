@@ -4,7 +4,8 @@ fun main() {
 
     println("Введите длину пароля:")
     val count = readln().toInt()
-    println("Ваш пароль: ${generatePassword(count)}")
+    val password = generatePassword(count)
+    println("Ваш пароль: $password")
 
 }
 
