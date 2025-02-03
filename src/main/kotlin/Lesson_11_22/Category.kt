@@ -1,6 +1,4 @@
-package org.example
-
-import org.example.Lesson_11_22.Recipe
+package org.example.Lesson_11_22
 
 class Category(
     val id: Int,
