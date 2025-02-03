@@ -20,7 +20,7 @@ fun main() {
         Thread.sleep(1000)
         println("Вы хотите продолжить?")
         val answer = readln()
-    } while (answer == "да")
+    } while (answer.lowercase() == "да")
 }
 
 fun getNumber() : Int {
