@@ -11,7 +11,8 @@ fun main() {
 
 fun generatePassword(number: Int) : String {
     val range = '0'..'9'
-    val symbols = "!\"#$%&'()*+,-./ "
+    val symbols = (MIN_SYMBOL_DEC..MAX_SYMBOL_DEC).map { it.toChar() }
+    println(MIN_SYMBOL_DEC.toChar())
     var password = ""
     for (i in 1..number) {
         if (i % 2 != 0) {
@@ -22,3 +23,5 @@ fun generatePassword(number: Int) : String {
     }
     return password
 }
+const val MIN_SYMBOL_DEC = 32
+const val MAX_SYMBOL_DEC = 47
