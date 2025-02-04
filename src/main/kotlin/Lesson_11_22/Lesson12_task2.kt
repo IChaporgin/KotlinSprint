@@ -6,4 +6,5 @@ fun main() {
     weather1.showWeather()
     println()
     weather2.showWeather()
+    weather1.dayTemperature = 30.1
 }

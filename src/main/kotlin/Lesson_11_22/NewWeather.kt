@@ -1,9 +1,6 @@
 package org.example.Lesson_11_22
 
-class NewWeather(_dayTemperature: Double, _nightTemperature: Double, _precipitation: Boolean) {
-    var dayTemperature = _dayTemperature
-    var nightTemperature = _nightTemperature
-    var precipitation = _precipitation
+class NewWeather(var dayTemperature: Double, var nightTemperature: Double, var precipitation: Boolean) {
 
     fun showWeather(){
         println("Дневная температура: $dayTemperature\nНочная температура: $nightTemperature\nОсадки: $precipitation")
