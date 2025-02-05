@@ -12,10 +12,10 @@ const val LENGTH_TOKEN = 32
 
 fun checkAuthorization(log: String, pas: String) : String? {
     val answer = (log == LOGIN && pas == PASSWORD)
-    val chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
+    val chars: Array<IntRange> = arrayOf(48..57, 65..90, 97..122)
     return if (answer) {
         (1..LENGTH_TOKEN)
-        .map { chars.random() }
+        .map { chars.random().random().toChar() }
         .joinToString("")}
     else null
 }
