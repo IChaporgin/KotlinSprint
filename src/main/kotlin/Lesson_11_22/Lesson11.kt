@@ -24,6 +24,7 @@ fun main() {
     println(user2.login)
     println(user2.password)
     println(user2.email)
+
 }
 
 class User (
