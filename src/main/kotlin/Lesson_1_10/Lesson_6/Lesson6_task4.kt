@@ -1,4 +1,4 @@
-package org.example.Lesson_6
+package org.example.Lesson_1_10.Lesson_6
 
 fun main() {
     println("Поиграем в небольшую игру. Тебе надо угадать число от 1 до 9. У тебя 5 попыток. Давай начнем")

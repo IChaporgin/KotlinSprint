@@ -1,4 +1,4 @@
-package org.example.Lesson_5
+package org.example.Lesson_1_10.Lesson_5
 
 import kotlin.math.pow
 

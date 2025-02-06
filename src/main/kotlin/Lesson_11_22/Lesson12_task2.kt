@@ -8,3 +8,10 @@ fun main() {
     weather2.showWeather()
     weather1.dayTemperature = 30.1
 }
+
+class NewWeather(var dayTemperature: Double, var nightTemperature: Double, var precipitation: Boolean) {
+
+    fun showWeather() {
+        println("Дневная температура: $dayTemperature\nНочная температура: $nightTemperature\nОсадки: $precipitation")
+    }
+}

@@ -1,4 +1,4 @@
-package org.example.Lesson_7
+package org.example.Lesson_1_10.Lesson_7
 
 fun main() {
     println("Введите количество секунд для отчета:")
