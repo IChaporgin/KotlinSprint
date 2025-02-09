@@ -1,4 +1,4 @@
-package org.example.Lesson_10
+package org.example.Lesson_1_10.Lesson_10
 
 fun main() {
     println("Введите логин и пароль:")

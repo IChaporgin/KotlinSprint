@@ -1,4 +1,4 @@
-package org.example.Lesson_9
+package org.example.Lesson_1_10.Lesson_9
 
 fun main() {
     val products: MutableSet<String> = mutableSetOf()
