@@ -1,4 +1,4 @@
-package org.example.Lesson_11_22
+package org.example.Lesson_11_22.Lesson_11
 
 fun main() {
     val room = Room(
