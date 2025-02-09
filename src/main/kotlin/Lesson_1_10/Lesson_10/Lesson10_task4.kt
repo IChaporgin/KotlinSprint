@@ -5,7 +5,7 @@ fun main() {
     println("Предлагаю сыграть в игру кости!")
     var win = 0
     do {
-        win += game(getNumber(), getNumber())
+        win += game(getNumber1(), getNumber1())
         Thread.sleep(1000)
         println("Вы хотите продолжить?")
         val answer = readln()
@@ -14,7 +14,7 @@ fun main() {
     println("Количество ваших побед: $win")
 }
 
-fun getNumber() : Int {
+fun getNumber1() : Int {
     val range = 1..6
     return range.random()
 }
