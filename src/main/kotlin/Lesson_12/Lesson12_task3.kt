@@ -7,14 +7,10 @@ fun main() {
 }
 
 class NewWeather(dayTemperature: Int, nightTemperature: Int,) {
-    val day: Int
-    val night: Int
     private val kelvin = 273
+    val day = dayTemperature - kelvin
+    val night = nightTemperature - kelvin
 
-    init{
-        day = dayTemperature - kelvin
-        night = nightTemperature - kelvin
-    }
 
     fun showWeather() {
         println("Дневная температура: $day°C\nНочная температура: $night°C")
