@@ -11,12 +11,10 @@ fun main() {
     forum.printThread()
 }
 
-
 class Forum(
     private val users: MutableList<UserForum> = mutableListOf(),
     private val messages: MutableList<MessageForum> = mutableListOf(),
     private var userIdCounter: Int = 1,
-
     ) {
     fun createNewUser(userName: String) : UserForum {
         val user = UserForum(userIdCounter++, userName)
@@ -39,7 +37,6 @@ class Forum(
             val user = users.find { it.userId == message.authorId }
             println("${user?.userName} : ${message.message}")
         }
-
     }
 }
 
