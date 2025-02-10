@@ -43,11 +43,9 @@ class Forum(
 class MessageForum(
     val authorId: Int,
     val message: String,
-) {
-}
+)
 
 class UserForum(
     val userId: Int,
     val userName: String,
-) {
-}
+)
