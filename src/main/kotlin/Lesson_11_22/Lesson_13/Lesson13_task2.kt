@@ -5,7 +5,6 @@ fun main() {
     val contact2 = NewPhoneBook("Helga", 87654321, "GPT")
     contact1.showInfo()
     contact2.showInfo()
-
 }
 
 class NewPhoneBook(
