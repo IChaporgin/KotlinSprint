@@ -8,15 +8,15 @@ open class Liner(
 
 class Cargo(
     name: String,
-    speed: Int,
-    capacity: Int,
-) : Liner(name, speed = 15, capacity = 500)
+    speed: Int = 15,
+    capacity: Int = 500,
+) : Liner(name, speed, capacity)
 
 class Icebreaker(
     name: String,
-    speed: Int,
-    capacity: Int
-) : Liner(name, speed = 20, capacity = 100) {
+    speed: Int = 20,
+    capacity: Int = 100,
+) : Liner(name, speed, capacity ) {
     fun breakIce(){
         println("Корабль $name ломает лед")
     }
