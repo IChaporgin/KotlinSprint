@@ -27,13 +27,12 @@ class Forum(
         if (userExist){
             messages.add(MessageForum(authorId, message))
             return true
-        } else {
-            return false
         }
+        return false
     }
 
-    fun printThread(){
-        for (message in messages){
+    fun printThread() {
+        for (message in messages) {
             val user = users.find { it.userId == message.authorId }
             println("${user?.userName} : ${message.message}")
         }
