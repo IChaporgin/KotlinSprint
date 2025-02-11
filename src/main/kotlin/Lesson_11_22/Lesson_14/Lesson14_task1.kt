@@ -1,4 +1,4 @@
-package org.example.Lesson_11_22.Lesson_14.Lesson_14
+package org.example.Lesson_11_22.Lesson_14
 
 open class Liner(
     val name: String,
