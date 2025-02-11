@@ -9,7 +9,7 @@ open class Liner(
 class Cargo(
     name: String,
     speed: Int,
-    val cargo: Int
+    capacity: Int,
 ) : Liner(name, speed = 15, capacity = 500)
 
 class Icebreaker(
