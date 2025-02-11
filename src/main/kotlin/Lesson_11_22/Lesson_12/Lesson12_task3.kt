@@ -3,7 +3,6 @@ package org.example.Lesson_11_22.Lesson_12
 fun main() {
     val weather = NewWeatherKelvin(300, 280)
     weather.showWeather()
-
 }
 
 class NewWeatherKelvin(dayTemperature: Int, nightTemperature: Int,) {
