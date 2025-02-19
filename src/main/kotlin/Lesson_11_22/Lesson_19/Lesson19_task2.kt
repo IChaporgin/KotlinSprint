@@ -8,7 +8,7 @@ fun main() {
     )
 
     listProducts.forEach { println(it.showInfo()) }
-    listProducts.forEach { println(it.product.getDescription()) }
+    listProducts.forEach { println(it.product.getCategoryName()) }
 }
 
 class EcommerceProducts(
@@ -16,26 +16,18 @@ class EcommerceProducts(
     val product: Products
 ) {
     fun showInfo() : String {
-        return "Товар id: $id тип: ${product.getDescription()}"
+        return "Товар id: $id тип: ${product.getCategoryName()}"
     }
 }
 
 enum class Products {
-    CLOTHING {
-        override fun getDescription(): String {
-            return "Одежда"
-        }
-    },
-    STATIONARY {
-        override fun getDescription(): String {
-            return "Канцелярские товары"
-        }
-    },
-    MISCELLANEOUS {
-        override fun getDescription(): String {
-            return "Разное"
-        }
-    };
+    CLOTHING,
+    STATIONARY,
+    MISCELLANEOUS;
 
-    abstract fun getDescription() : String
+    fun getCategoryName() = when(this) {
+        CLOTHING -> "Одежда"
+        STATIONARY -> "Канцелярские товары"
+        MISCELLANEOUS -> "Разное"
+    }
 }
