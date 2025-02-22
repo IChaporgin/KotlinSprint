@@ -3,11 +3,11 @@ package org.example.Lesson_11_22.Lesson_19
 fun main() {
     val tank = Tank("Танк1")
     println(tank.shooting())
-    tank.reload(Cartridges.RED)
+    tank.reload(Tank.Cartridges.RED)
     println(tank.shooting())
-    tank.reload(Cartridges.BLUE)
+    tank.reload(Tank.Cartridges.BLUE)
     println(tank.shooting())
-    tank.reload(Cartridges.GREEN)
+    tank.reload(Tank.Cartridges.GREEN)
     println(tank.shooting())
     tank.reload(null)
     println(tank.shooting())
@@ -20,9 +20,9 @@ class Tank(
 
     fun reload(patron: Cartridges?) {
         clip = when (patron) {
-            Cartridges.RED -> 20
-            Cartridges.BLUE -> 5
-            Cartridges.GREEN -> 10
+            Cartridges.RED -> Cartridges.RED.damage
+            Cartridges.BLUE -> Cartridges.BLUE.damage
+            Cartridges.GREEN -> Cartridges.BLUE.damage
             else -> null
         }
     }
@@ -32,10 +32,10 @@ class Tank(
         }
         return "Обойма пустая, необходимо зарядить оружие"
     }
-}
 
-enum class Cartridges {
-    BLUE,
-    RED,
-    GREEN,
+    enum class Cartridges(val damage: Int) {
+        BLUE(5),
+        RED(20),
+        GREEN(10),
+    }
 }
