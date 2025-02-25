@@ -16,19 +16,15 @@ fun main() {
 class Tank(
     val name: String,
 ) {
-    private var clip: Int? = null
+    private var clip: Cartridges? = null
 
     fun reload(patron: Cartridges?) {
-        clip = when (patron) {
-            Cartridges.RED -> Cartridges.RED.damage
-            Cartridges.BLUE -> Cartridges.BLUE.damage
-            Cartridges.GREEN -> Cartridges.BLUE.damage
-            else -> null
-        }
+        clip = patron
     }
+
     fun shooting() : String {
         if (clip != null) {
-            return "$name сделал выстрел $clip единиц"
+            return "$name сделал выстрел ${clip!!.damage} единиц"
         }
         return "Обойма пустая, необходимо зарядить оружие"
     }
